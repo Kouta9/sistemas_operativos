@@ -96,6 +96,8 @@ body {
     border-radius: 10px;
     margin: 5px;
     background-color: #c7c7c7;
+    display: flex;
+    justify-content: space-around;
 }
 /*modificacion de procesos activos*/
 .procesos_activos_a1 {
