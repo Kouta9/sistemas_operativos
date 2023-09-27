@@ -126,7 +126,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    list-style: none;
+    list-style: none; /*modifica para que las listas no aparezcan con el punto enfrente*/
 }
 /*modificacion de procesos activos*/
 .procesos_en_espera_a1 {
