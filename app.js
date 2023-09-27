@@ -23,7 +23,9 @@ $(document).ready(function(){
         let eleccion =$("#selec_proceso option:selected").text(); /*esto es para jalar la seleccion del select y alojarlo en una variable*/
 
         if (eleccion == "A1") {
-            $('.procesos_activos_a1').css("color", "#631ea7"); /*esto hace que cambie de color a verde*/
+            $('.procesos_activos_a1').css("background-color", "#631ea7"); /*esto hace que cambie de color a verde*/
+            $(".procesos_actovos_a").css("color","white")
+
             contador =+1;
             $(".casilla_de_numeros_procesos").text(contador);//no funciona
             alert(contador)                                  //no fucniona
@@ -35,7 +37,8 @@ $(document).ready(function(){
 
 
         }if (eleccion == "A2") {
-            $('.procesos_activos_a2').css("color", "#2c579b");
+            $('.procesos_activos_a2').css("background-color", "#2c579b");
+            $(".procesos_actovos_a2").css("color","white")
             contador =+1;
             $(".casilla_de_numeros_procesos").text(contador);
             alert(contador)
@@ -45,7 +48,8 @@ $(document).ready(function(){
             $('#pagina_2').css("background-color", "#2c579b") 
 
         }if (eleccion == "A3") {
-            $('.procesos_activos_a3').css("color", "#b3520b");
+            $('.procesos_activos_a3').css("background-color", "#b3520b");
+            $(".procesos_actovos_a3").css("color","white")
             contador =+1;
             $(".casilla_de_numeros_procesos").text(contador);
 
@@ -54,7 +58,8 @@ $(document).ready(function(){
             $('#pagina_3').css("background-color", "#b3520b")
             
         }if (eleccion == "A4") {
-            $('.procesos_activos_a4').css("color", "#e174bb");
+            $('.procesos_activos_a4').css("background-color", "#e174bb");
+            $(".procesos_actovos_a4").css("color","white")
             contador =+1;
             $(".casilla_de_numeros_procesos").text(contador);
 
@@ -63,7 +68,8 @@ $(document).ready(function(){
             $('#pagina_4').css("background-color", "#e174bb")
 
         }if (eleccion == "A5") {
-            $('.procesos_activos_a5').css("color", "#dcb017");
+            $('.procesos_activos_a5').css("background-color", "#dcb017");
+            $(".procesos_actovos_a5").css("color","white")
             contador =+1;
             $(".casilla_de_numeros_procesos").text(contador);
             $("#pagina_5").text("Pagina A5"); 
