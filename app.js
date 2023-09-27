@@ -14,7 +14,7 @@ $(document).ready(function(){
 
     $('#boton_iniciar').click(function(){ 
         let contador=Number( $(".casilla_de_numeros_procesos").text())
-        
+
 
         let eleccion =$("#selec_proceso option:selected").text(); /*esto es para jalar la seleccion del select y alojarlo en una variable*/
 
@@ -24,7 +24,7 @@ $(document).ready(function(){
             
             $(".casilla_de_numeros_procesos").text(contador + 1);// modifica el contador que a su vez modifica la casilla de procesos activos
         
-            $("#pagina_1").text("Pagina A1"); //texto en la pagina
+            $("#pagina_1").text("Proceso A1"); //texto en la pagina
             $('#pagina_1').css("color", "white") //color del texto en la pagina
             $('#pagina_1').css("background-color", "#631ea7") // color del fondo de la pagina
             
@@ -36,7 +36,7 @@ $(document).ready(function(){
             
             $(".casilla_de_numeros_procesos").text(contador + 1);
 
-            $("#pagina_2").text("Pagina A2"); 
+            $("#pagina_2").text("Proceso A2"); 
             $('#pagina_2').css("color", "white")
             $('#pagina_2').css("background-color", "#2c579b") 
 
@@ -46,7 +46,7 @@ $(document).ready(function(){
             
             $(".casilla_de_numeros_procesos").text(contador + 1);
 
-            $("#pagina_3").text("Pagina A3"); 
+            $("#pagina_3").text("Proceso A3"); 
             $('#pagina_3').css("color", "white")
             $('#pagina_3').css("background-color", "#b3520b")
             
@@ -56,7 +56,7 @@ $(document).ready(function(){
             
             $(".casilla_de_numeros_procesos").text(contador + 1);
 
-            $("#pagina_4").text("Pagina A4"); 
+            $("#pagina_4").text("Proceso A4"); 
             $('#pagina_4').css("color", "white")
             $('#pagina_4').css("background-color", "#e174bb")
 
@@ -66,7 +66,7 @@ $(document).ready(function(){
 
             $(".casilla_de_numeros_procesos").text(contador + 1);
 
-            $("#pagina_5").text("Pagina A5"); 
+            $("#pagina_5").text("Proceso A5"); 
             $('#pagina_5').css("color", "white")
             $('#pagina_5').css("background-color", "#dcb017")
         }
@@ -112,61 +112,52 @@ $(document).ready(function(){
             $('#pagina_5').css("background-color", "#c7c7c7") 
         }
     });
+    $('#boton_reiniciar').click(function(){  
+        /*reseteo de lista de procesos activos*/
+        $('.procesos_activos_a1').css("color", "#c7c7c7");
+        $('.procesos_activos_a1').css("background-color", "#c7c7c7");
+
+        $('.procesos_activos_a2').css("color", "#c7c7c7");
+        $('.procesos_activos_a2').css("background-color", "#c7c7c7");
+
+        $('.procesos_activos_a3').css("color", "#c7c7c7");
+        $('.procesos_activos_a3').css("background-color", "#c7c7c7");
+
+        $('.procesos_activos_a4').css("color", "#c7c7c7");
+        $('.procesos_activos_a4').css("background-color", "#c7c7c7");
+
+        $('.procesos_activos_a5').css("color", "#c7c7c7");
+        $('.procesos_activos_a5').css("background-color", "#c7c7c7");
+
+        /*reseteo de procesos */
+        $("#pagina_1").text(" "); 
+        $('#pagina_1').css("color", "white")
+        $('#pagina_1').css("background-color", "#c7c7c7") 
+
+        $("#pagina_2").text(" "); 
+        $('#pagina_2').css("color", "white")
+        $('#pagina_2').css("background-color", "#c7c7c7") 
+
+        $("#pagina_3").text(" "); 
+        $('#pagina_3').css("color", "white")
+        $('#pagina_3').css("background-color", "#c7c7c7") 
+
+        $("#pagina_4").text(" "); 
+        $('#pagina_4').css("color", "white")
+        $('#pagina_4').css("background-color", "#c7c7c7") 
+
+        $("#pagina_5").text(" "); 
+        $('#pagina_5').css("color", "white")
+        $('#pagina_5').css("background-color", "#c7c7c7") 
+
+        /*reseteo de numero de procesos */
+        $(".casilla_de_numeros_procesos").text("0");
+    });
 
 
 
 
  });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
