@@ -24,7 +24,7 @@ $(document).ready(function(){
 
         if (eleccion == "A1") {
             $('.procesos_activos_a1').css("background-color", "#631ea7"); /*esto hace que cambie de color a verde*/
-            $(".procesos_actovos_a").css("color","white")
+            $(".procesos_actovos_a1").css("color","white")
 
             contador =+1;
             $(".casilla_de_numeros_procesos").text(contador);//no funciona
