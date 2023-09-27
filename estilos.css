@@ -94,10 +94,12 @@ body {
 .lista_procesos_activos {
     border: 5px solid rgb(124, 124, 124);
     border-radius: 10px;
-    margin: 5px;
     background-color: #c7c7c7;
+    margin: -50px;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
 }
 /*modificacion de procesos activos*/
 .procesos_activos_a1 {
@@ -120,6 +122,11 @@ body {
     border-radius: 10px;
     margin: 5px;
     background-color: #c7c7c7;
+    margin: -50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
 }
 /*modificacion de procesos activos*/
 .procesos_en_espera_a1 {

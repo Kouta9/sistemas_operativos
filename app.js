@@ -4,7 +4,6 @@ $(document).ready(function(){
     let contador = 0;
 
     /*
-
     colores de identificacion
     _____________________
     |A1     |#631ea7    |
@@ -13,10 +12,6 @@ $(document).ready(function(){
     |A4     |#e174bb    |
     |A5     |#dcb017    |
     ---------------------
-    
-    
-    
-    
     */
 
     $('#boton_iniciar').click(function(){ 
@@ -83,26 +78,36 @@ $(document).ready(function(){
         let eleccion_terminar =$("#selec_proceso_para_terminar option:selected").text(); /*esto es para jalar la seleccion del select y alojarlo en una variable*/
         if (eleccion_terminar == "A1") {
             $('.procesos_activos_a1').css("color", "#c7c7c7"); /*esto hace que cambie de color a gris*/
+            $('.procesos_activos_a1').css("background-color", "#c7c7c7"); /*esto hace que cambie de background-color a gris*/
+
             $("#pagina_1").text(" "); 
             $('#pagina_1').css("color", "white")
             $('#pagina_1').css("background-color", "#c7c7c7") 
         }if (eleccion_terminar == "A2") {
             $('.procesos_activos_a2').css("color", "#c7c7c7");
+            $('.procesos_activos_a2').css("background-color", "#c7c7c7");
+
             $("#pagina_2").text(" "); 
             $('#pagina_2').css("color", "white")
             $('#pagina_2').css("background-color", "#c7c7c7") 
         }if (eleccion_terminar == "A3") {
             $('.procesos_activos_a3').css("color", "#c7c7c7");
+            $('.procesos_activos_a3').css("background-color", "#c7c7c7");
+
             $("#pagina_3").text(" "); 
             $('#pagina_3').css("color", "white")
             $('#pagina_3').css("background-color", "#c7c7c7") 
         }if (eleccion_terminar == "A4") {
             $('.procesos_activos_a4').css("color", "#c7c7c7");
+            $('.procesos_activos_a4').css("background-color", "#c7c7c7");
+
             $("#pagina_4").text(" "); 
             $('#pagina_4').css("color", "white")
             $('#pagina_4').css("background-color", "#c7c7c7") 
         }if (eleccion_terminar == "A5") {
             $('.procesos_activos_a5').css("color", "#c7c7c7");
+            $('.procesos_activos_a5').css("background-color", "#c7c7c7");
+
             $("#pagina_5").text(" "); 
             $('#pagina_5').css("color", "white")
             $('#pagina_5').css("background-color", "#c7c7c7") 
