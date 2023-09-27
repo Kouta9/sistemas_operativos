@@ -101,6 +101,10 @@ body {
     justify-content: space-between;
     list-style: none;
 }
+li {
+    border-radius: 5px;
+    margin: 10px;
+}
 /*modificacion de procesos activos*/
 .procesos_activos_a1 {
     color: #c7c7c7;

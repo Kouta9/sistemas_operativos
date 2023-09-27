@@ -1,7 +1,5 @@
 $(document).ready(function(){
-    
-    let numeroDeProcesos=Number( $(".casilla_de_numeros_procesos").text())
-    let contador = 0;
+   
 
     /*
     colores de identificacion
@@ -15,16 +13,17 @@ $(document).ready(function(){
     */
 
     $('#boton_iniciar').click(function(){ 
+        let contador=Number( $(".casilla_de_numeros_procesos").text())
+        
+
         let eleccion =$("#selec_proceso option:selected").text(); /*esto es para jalar la seleccion del select y alojarlo en una variable*/
 
         if (eleccion == "A1") {
             $('.procesos_activos_a1').css("background-color", "#631ea7"); /*esto hace que cambie de color a verde*/
             $(".procesos_actovos_a1").css("color","white")
-
-            contador =+1;
-            $(".casilla_de_numeros_procesos").text(contador);//no funciona
-            alert(contador)                                  //no fucniona
-
+            
+            $(".casilla_de_numeros_procesos").text(contador + 1);// modifica el contador que a su vez modifica la casilla de procesos activos
+        
             $("#pagina_1").text("Pagina A1"); //texto en la pagina
             $('#pagina_1').css("color", "white") //color del texto en la pagina
             $('#pagina_1').css("background-color", "#631ea7") // color del fondo de la pagina
@@ -34,9 +33,8 @@ $(document).ready(function(){
         }if (eleccion == "A2") {
             $('.procesos_activos_a2').css("background-color", "#2c579b");
             $(".procesos_actovos_a2").css("color","white")
-            contador =+1;
-            $(".casilla_de_numeros_procesos").text(contador);
-            alert(contador)
+            
+            $(".casilla_de_numeros_procesos").text(contador + 1);
 
             $("#pagina_2").text("Pagina A2"); 
             $('#pagina_2').css("color", "white")
@@ -45,8 +43,8 @@ $(document).ready(function(){
         }if (eleccion == "A3") {
             $('.procesos_activos_a3').css("background-color", "#b3520b");
             $(".procesos_actovos_a3").css("color","white")
-            contador =+1;
-            $(".casilla_de_numeros_procesos").text(contador);
+            
+            $(".casilla_de_numeros_procesos").text(contador + 1);
 
             $("#pagina_3").text("Pagina A3"); 
             $('#pagina_3').css("color", "white")
@@ -55,8 +53,8 @@ $(document).ready(function(){
         }if (eleccion == "A4") {
             $('.procesos_activos_a4').css("background-color", "#e174bb");
             $(".procesos_actovos_a4").css("color","white")
-            contador =+1;
-            $(".casilla_de_numeros_procesos").text(contador);
+            
+            $(".casilla_de_numeros_procesos").text(contador + 1);
 
             $("#pagina_4").text("Pagina A4"); 
             $('#pagina_4').css("color", "white")
@@ -65,8 +63,9 @@ $(document).ready(function(){
         }if (eleccion == "A5") {
             $('.procesos_activos_a5').css("background-color", "#dcb017");
             $(".procesos_actovos_a5").css("color","white")
-            contador =+1;
-            $(".casilla_de_numeros_procesos").text(contador);
+
+            $(".casilla_de_numeros_procesos").text(contador + 1);
+
             $("#pagina_5").text("Pagina A5"); 
             $('#pagina_5').css("color", "white")
             $('#pagina_5').css("background-color", "#dcb017")
