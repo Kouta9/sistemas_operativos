@@ -851,22 +851,10 @@ $(document).ready(function(){
 
     });
 
-
-
-
-
-
-
-
-
-
-
-
-
     /*terminar proceso*/
     $('#boton_terminar_proceso').click(function(){ 
         let eleccion_terminar =$("#selec_proceso_para_terminar option:selected").text(); /*esto es para jalar la seleccion del select y alojarlo en una variable*/
-        if (eleccion_terminar == "A1") {
+        if (eleccion_terminar == "A1") {            
             $('.procesos_activos_a1').css("color", "#c7c7c7"); /*esto hace que cambie de color a gris*/
             $('.procesos_activos_a1').css("background-color", "#c7c7c7"); /*esto hace que cambie de background-color a gris*/
 
