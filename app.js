@@ -13,11 +13,42 @@ $(document).ready(function(){
     ---------------------
     */
 
+    
+    
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    //importante
+    var pa_despues_proceso = [];//para guardar proceso y que se van a "en espera"
+    var pa_despues_tamano = [];//para guardar tamaño y que se van a "en espera"
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
     $('#boton_iniciar').click(function(){ 
         let contador = Number( $(".casilla_de_numeros_procesos").text());
         let seleccionDeTamano =Number( $("#selec_tamano option:selected").text());//eleccion de tamano
         let num_ocupadas =Number( $(".casilla_de_paginas_ocupadas").text());//casilla de paginas ocupadas
-
         let eleccion = $("#selec_proceso option:selected").text(); /*esto es para jalar la seleccion del select y alojarlo en una variable*/
 
         // Definir un objeto que contiene las variables y sus colores
@@ -139,6 +170,38 @@ $(document).ready(function(){
                     $(".casilla_de_paginas_ocupadas").text(num_ocupadas + 1);//sumar a paginas ocupadas
                     return     
                 }else{
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    //importante----------------------------------------
+                    pa_despues_proceso.push(variableSeleccionada);
+                    pa_despues_tamano.push(seleccionDeTamano);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
                     if ($(".procesos_en_espera_a1").text()==""){ 
                         $(".procesos_en_espera_a1").text(variableSeleccionada);
                         $('.procesos_en_espera_a1').css("background-color", colorYVariable);
@@ -1988,6 +2051,6 @@ $(document).ready(function(){
     $('.alerta_sin_espacio').click(function(){
         alert("hola_le acabas de dar click al boton sin espacio")
     })
-    
+
  });
  
