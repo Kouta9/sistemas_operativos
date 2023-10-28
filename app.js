@@ -1,3 +1,19 @@
+
+    //importante
+var pa_despues_proceso = [];//para guardar proceso y que se van a "en espera"
+var pa_despues_tamano = [];//para guardar tamaño y que se van a "en espera"
+
+
+
+
+
+
+
+
+
+
+
+
 $(document).ready(function(){
    
 
@@ -14,35 +30,6 @@ $(document).ready(function(){
     */
 
     
-    
-
-
-
-
-
-
-
-
-
-    
-    
-    
-    
-    //importante
-    var pa_despues_proceso = [];//para guardar proceso y que se van a "en espera"
-    var pa_despues_tamano = [];//para guardar tamaño y que se van a "en espera"
-
-
-
-
-
-
-
-
-
-    
-
-
 
 
     $('#boton_iniciar').click(function(){ 
@@ -171,37 +158,11 @@ $(document).ready(function(){
                     return     
                 }else{
 
-
-
-
-
-
-
-
-
-
-
-
-
-                    //importante----------------------------------------
+                    //importante------------------para cuando se ponga en espera----------------------
                     pa_despues_proceso.push(variableSeleccionada);
                     pa_despues_tamano.push(seleccionDeTamano);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    
+                    //------------------------------------------
+                                        
                     if ($(".procesos_en_espera_a1").text()==""){ 
                         $(".procesos_en_espera_a1").text(variableSeleccionada);
                         $('.procesos_en_espera_a1').css("background-color", colorYVariable);
@@ -347,6 +308,8 @@ $(document).ready(function(){
                     $(".casilla_de_paginas_ocupadas").text(num_ocupadas + 1);//sumar a paginas ocupadas
                     return     
                 }else{
+                    pa_despues_proceso.push(variableSeleccionada);
+                    pa_despues_tamano.push(seleccionDeTamano);
                     if ($(".procesos_en_espera_a1").text()==""){ 
                         $(".procesos_en_espera_a1").text(variableSeleccionada);
                         $('.procesos_en_espera_a1').css("background-color", colorYVariable);
@@ -776,6 +739,8 @@ $(document).ready(function(){
                     alert("no hay espacio sufuciete")
                     $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
                 }else {
+                    pa_despues_proceso.push(variableSeleccionada);
+                    pa_despues_tamano.push(seleccionDeTamano);
                     if ($(".procesos_en_espera_a1").text()==""){ 
                         $(".procesos_en_espera_a1").text(variableSeleccionada);
                         $('.procesos_en_espera_a1').css("background-color", colorYVariable);
@@ -1154,6 +1119,8 @@ $(document).ready(function(){
                     }   
                     return 
                 }else{
+                    pa_despues_proceso.push(variableSeleccionada);
+                    pa_despues_tamano.push(seleccionDeTamano);
                     if ($(".procesos_en_espera_a1").text()==""){ 
                         $(".procesos_en_espera_a1").text(variableSeleccionada);
                         $('.procesos_en_espera_a1').css("background-color", colorYVariable);
@@ -1348,6 +1315,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a1").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a2").text()==""){
                         $(".procesos_en_espera_a2").text(variableSeleccionada);
@@ -1355,6 +1324,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a2").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a3").text()==""){
                         $(".procesos_en_espera_a3").text(variableSeleccionada);
@@ -1362,6 +1333,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a3").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a4").text()==""){
                         $(".procesos_en_espera_a4").text(variableSeleccionada);
@@ -1369,6 +1342,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a4").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a5").text()==""){
                         $(".procesos_en_espera_a5").text(variableSeleccionada);
@@ -1376,6 +1351,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a5").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }
 
@@ -1386,6 +1363,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a1").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a2").text()==""){
                         $(".procesos_en_espera_a2").text(variableSeleccionada);
@@ -1393,6 +1372,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a2").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a3").text()==""){
                         $(".procesos_en_espera_a3").text(variableSeleccionada);
@@ -1400,6 +1381,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a3").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a4").text()==""){
                         $(".procesos_en_espera_a4").text(variableSeleccionada);
@@ -1407,6 +1390,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a4").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a5").text()==""){
                         $(".procesos_en_espera_a5").text(variableSeleccionada);
@@ -1414,6 +1399,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a5").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }
                 }if ($("#pagina_5").text()=="") {                
@@ -1423,6 +1410,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a1").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a2").text()==""){
                         $(".procesos_en_espera_a2").text(variableSeleccionada);
@@ -1430,6 +1419,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a2").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a3").text()==""){
                         $(".procesos_en_espera_a3").text(variableSeleccionada);
@@ -1437,6 +1428,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a3").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a4").text()==""){
                         $(".procesos_en_espera_a4").text(variableSeleccionada);
@@ -1444,6 +1437,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a4").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a5").text()==""){
                         $(".procesos_en_espera_a5").text(variableSeleccionada);
@@ -1451,6 +1446,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a5").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }
                 }if ($("#pagina_6").text()=="") {                
@@ -1460,6 +1457,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a1").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a2").text()==""){
                         $(".procesos_en_espera_a2").text(variableSeleccionada);
@@ -1467,6 +1466,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a2").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a3").text()==""){
                         $(".procesos_en_espera_a3").text(variableSeleccionada);
@@ -1474,6 +1475,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a3").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a4").text()==""){
                         $(".procesos_en_espera_a4").text(variableSeleccionada);
@@ -1481,6 +1484,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a4").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a5").text()==""){
                         $(".procesos_en_espera_a5").text(variableSeleccionada);
@@ -1488,6 +1493,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a5").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }
                 }if ($("#pagina_7").text()=="") {                
@@ -1497,6 +1504,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a1").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a2").text()==""){
                         $(".procesos_en_espera_a2").text(variableSeleccionada);
@@ -1504,6 +1513,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a2").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a3").text()==""){
                         $(".procesos_en_espera_a3").text(variableSeleccionada);
@@ -1511,6 +1522,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a3").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a4").text()==""){
                         $(".procesos_en_espera_a4").text(variableSeleccionada);
@@ -1518,6 +1531,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a4").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a5").text()==""){
                         $(".procesos_en_espera_a5").text(variableSeleccionada);
@@ -1525,6 +1540,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a5").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }
                 }if ($("#pagina_8").text()=="") {                
@@ -1534,6 +1551,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a1").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a2").text()==""){
                         $(".procesos_en_espera_a2").text(variableSeleccionada);
@@ -1541,6 +1560,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a2").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a3").text()==""){
                         $(".procesos_en_espera_a3").text(variableSeleccionada);
@@ -1548,6 +1569,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a3").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a4").text()==""){
                         $(".procesos_en_espera_a4").text(variableSeleccionada);
@@ -1555,6 +1578,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a4").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a5").text()==""){
                         $(".procesos_en_espera_a5").text(variableSeleccionada);
@@ -1562,6 +1587,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a5").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }
                 }if ($("#pagina_9").text()=="") {                
@@ -1571,6 +1598,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a1").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a2").text()==""){
                         $(".procesos_en_espera_a2").text(variableSeleccionada);
@@ -1578,6 +1607,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a2").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a3").text()==""){
                         $(".procesos_en_espera_a3").text(variableSeleccionada);
@@ -1585,6 +1616,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a3").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a4").text()==""){
                         $(".procesos_en_espera_a4").text(variableSeleccionada);
@@ -1592,6 +1625,8 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a4").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }if ($(".procesos_en_espera_a5").text()==""){
                         $(".procesos_en_espera_a5").text(variableSeleccionada);
@@ -1599,9 +1634,13 @@ $(document).ready(function(){
                         $(".procesos_en_espera_a5").css("color","white")
                         alert("Sin espacio")
                         $('.alerta_sin_espacio').css("background-color", "red");//      alerta_sin_espacio
+                        pa_despues_proceso.push(variableSeleccionada);//                                    agregando a en espera
+                        pa_despues_tamano.push(seleccionDeTamano);
                         return
                     }
                 }else{
+                    pa_despues_proceso.push(variableSeleccionada);
+                    pa_despues_tamano.push(seleccionDeTamano);
                     if ($(".procesos_en_espera_a1").text()==""){ 
                         $(".procesos_en_espera_a1").text(variableSeleccionada);
                         $('.procesos_en_espera_a1').css("background-color", colorYVariable);
@@ -1682,39 +1721,40 @@ $(document).ready(function(){
             let fraceA = "A1";
 
             if (pagina_a1.includes(fraceA)) {
-                $('#pagina_1').css("color", "#c7c7c7");
+                $('#pagina_1').text("")
                 $('#pagina_1').css("background-color", "#c7c7c7");
+
             }
             if(pagina_a2.includes(fraceA)){
-                $('#pagina_2').css("color", "#c7c7c7");
+                $('#pagina_2').text("")
                 $('#pagina_2').css("background-color", "#c7c7c7");
             }
             if(pagina_a3.includes(fraceA)){
-                $('#pagina_3').css("color", "#c7c7c7");
+                $('#pagina_3').text("")
                 $('#pagina_3').css("background-color", "#c7c7c7");
             }
             if(pagina_a4.includes(fraceA)){
-                $('#pagina_4').css("color", "#c7c7c7");
+                $('#pagina_4').text("")
                 $('#pagina_4').css("background-color", "#c7c7c7");
             }
             if(pagina_a5.includes(fraceA)){
-                $('#pagina_5').css("color", "#c7c7c7");
+                $('#pagina_5').text("")
                 $('#pagina_5').css("background-color", "#c7c7c7");
             }
             if(pagina_a6.includes(fraceA)){
-                $('#pagina_6').css("color", "#c7c7c7");
+                $('#pagina_6').text("")
                 $('#pagina_6').css("background-color", "#c7c7c7");
             }
             if(pagina_a7.includes(fraceA)){
-                $('#pagina_7').css("color", "#c7c7c7");
+                $('#pagina_7').text("")
                 $('#pagina_7').css("background-color", "#c7c7c7");
             }
             if(pagina_a8.includes(fraceA)){
-                $('#pagina_8').css("color", "#c7c7c7");
+                $('#pagina_8').text("")
                 $('#pagina_8').css("background-color", "#c7c7c7");
             }
             if(pagina_a9.includes(fraceA)){
-                $('#pagina_9').css("color", "#c7c7c7");
+                $('#pagina_9').text("")
                 $('#pagina_9').css("background-color", "#c7c7c7");
             }
 
@@ -1748,39 +1788,39 @@ $(document).ready(function(){
             let fraceA = "A2";
 
             if (pagina_a1.includes(fraceA)) {
-                $('#pagina_1').css("color", "#c7c7c7");
+                $('#pagina_1').text("")
                 $('#pagina_1').css("background-color", "#c7c7c7");
             }
             if(pagina_a2.includes(fraceA)){
-                $('#pagina_2').css("color", "#c7c7c7");
+                $('#pagina_2').text("")
                 $('#pagina_2').css("background-color", "#c7c7c7");
             }
             if(pagina_a3.includes(fraceA)){
-                $('#pagina_3').css("color", "#c7c7c7");
+                $('#pagina_3').text("")
                 $('#pagina_3').css("background-color", "#c7c7c7");
             }
             if(pagina_a4.includes(fraceA)){
-                $('#pagina_4').css("color", "#c7c7c7");
+                $('#pagina_4').text("")
                 $('#pagina_4').css("background-color", "#c7c7c7");
             }
             if(pagina_a5.includes(fraceA)){
-                $('#pagina_5').css("color", "#c7c7c7");
+                $('#pagina_5').text("")
                 $('#pagina_5').css("background-color", "#c7c7c7");
             }
             if(pagina_a6.includes(fraceA)){
-                $('#pagina_6').css("color", "#c7c7c7");
+                $('#pagina_6').text("")
                 $('#pagina_6').css("background-color", "#c7c7c7");
             }
             if(pagina_a7.includes(fraceA)){
-                $('#pagina_7').css("color", "#c7c7c7");
+                $('#pagina_7').text("")
                 $('#pagina_7').css("background-color", "#c7c7c7");
             }
             if(pagina_a8.includes(fraceA)){
-                $('#pagina_8').css("color", "#c7c7c7");
+                $('#pagina_8').text("")
                 $('#pagina_8').css("background-color", "#c7c7c7");
             }
             if(pagina_a9.includes(fraceA)){
-                $('#pagina_9').css("color", "#c7c7c7");
+                $('#pagina_9').text("")
                 $('#pagina_9').css("background-color", "#c7c7c7");
             }
         }if (eleccion_terminar == "A3") {
@@ -1813,39 +1853,39 @@ $(document).ready(function(){
             let fraceA = "A3";
 
             if (pagina_a1.includes(fraceA)) {
-                $('#pagina_1').css("color", "#c7c7c7");
+                $('#pagina_1').text("")
                 $('#pagina_1').css("background-color", "#c7c7c7");
             }
             if(pagina_a2.includes(fraceA)){
-                $('#pagina_2').css("color", "#c7c7c7");
+                $('#pagina_2').text("")
                 $('#pagina_2').css("background-color", "#c7c7c7");
             }
             if(pagina_a3.includes(fraceA)){
-                $('#pagina_3').css("color", "#c7c7c7");
+                $('#pagina_3').text("")
                 $('#pagina_3').css("background-color", "#c7c7c7");
             }
             if(pagina_a4.includes(fraceA)){
-                $('#pagina_4').css("color", "#c7c7c7");
+                $('#pagina_4').text("")
                 $('#pagina_4').css("background-color", "#c7c7c7");
             }
             if(pagina_a5.includes(fraceA)){
-                $('#pagina_5').css("color", "#c7c7c7");
+                $('#pagina_5').text("")
                 $('#pagina_5').css("background-color", "#c7c7c7");
             }
             if(pagina_a6.includes(fraceA)){
-                $('#pagina_6').css("color", "#c7c7c7");
+                $('#pagina_6').text("")
                 $('#pagina_6').css("background-color", "#c7c7c7");
             }
             if(pagina_a7.includes(fraceA)){
-                $('#pagina_7').css("color", "#c7c7c7");
+                $('#pagina_7').text("")
                 $('#pagina_7').css("background-color", "#c7c7c7");
             }
             if(pagina_a8.includes(fraceA)){
-                $('#pagina_8').css("color", "#c7c7c7");
+                $('#pagina_8').text("")
                 $('#pagina_8').css("background-color", "#c7c7c7");
             }
             if(pagina_a9.includes(fraceA)){
-                $('#pagina_9').css("color", "#c7c7c7");
+                $('#pagina_9').text("")
                 $('#pagina_9').css("background-color", "#c7c7c7");
             }
         }if (eleccion_terminar == "A4") {
@@ -1878,39 +1918,39 @@ $(document).ready(function(){
             let fraceA = "A4";
 
             if (pagina_a1.includes(fraceA)) {
-                $('#pagina_1').css("color", "#c7c7c7");
+                $('#pagina_1').text("")
                 $('#pagina_1').css("background-color", "#c7c7c7");
             }
             if(pagina_a2.includes(fraceA)){
-                $('#pagina_2').css("color", "#c7c7c7");
+                $('#pagina_2').text("")
                 $('#pagina_2').css("background-color", "#c7c7c7");
             }
             if(pagina_a3.includes(fraceA)){
-                $('#pagina_3').css("color", "#c7c7c7");
+                $('#pagina_3').text("")
                 $('#pagina_3').css("background-color", "#c7c7c7");
             }
             if(pagina_a4.includes(fraceA)){
-                $('#pagina_4').css("color", "#c7c7c7");
+                $('#pagina_4').text("")
                 $('#pagina_4').css("background-color", "#c7c7c7");
             }
             if(pagina_a5.includes(fraceA)){
-                $('#pagina_5').css("color", "#c7c7c7");
+                $('#pagina_5').text("")
                 $('#pagina_5').css("background-color", "#c7c7c7");
             }
             if(pagina_a6.includes(fraceA)){
-                $('#pagina_6').css("color", "#c7c7c7");
+                $('#pagina_6').text("")
                 $('#pagina_6').css("background-color", "#c7c7c7");
             }
             if(pagina_a7.includes(fraceA)){
-                $('#pagina_7').css("color", "#c7c7c7");
+                $('#pagina_7').text("")
                 $('#pagina_7').css("background-color", "#c7c7c7");
             }
             if(pagina_a8.includes(fraceA)){
-                $('#pagina_8').css("color", "#c7c7c7");
+                $('#pagina_8').text("")
                 $('#pagina_8').css("background-color", "#c7c7c7");
             }
             if(pagina_a9.includes(fraceA)){
-                $('#pagina_9').css("color", "#c7c7c7");
+                $('#pagina_9').text("")
                 $('#pagina_9').css("background-color", "#c7c7c7");
             }
         }if (eleccion_terminar == "A5") {
@@ -1944,39 +1984,39 @@ $(document).ready(function(){
             let fraceA = "A5";
 
             if (pagina_a1.includes(fraceA)) {
-                $('#pagina_1').css("color", "#c7c7c7");
+                $('#pagina_1').text("")
                 $('#pagina_1').css("background-color", "#c7c7c7");
             }
             if(pagina_a2.includes(fraceA)){
-                $('#pagina_2').css("color", "#c7c7c7");
+                $('#pagina_2').text("")
                 $('#pagina_2').css("background-color", "#c7c7c7");
             }
             if(pagina_a3.includes(fraceA)){
-                $('#pagina_3').css("color", "#c7c7c7");
+                $('#pagina_3').text("")
                 $('#pagina_3').css("background-color", "#c7c7c7");
             }
             if(pagina_a4.includes(fraceA)){
-                $('#pagina_4').css("color", "#c7c7c7");
+                $('#pagina_4').text("")
                 $('#pagina_4').css("background-color", "#c7c7c7");
             }
             if(pagina_a5.includes(fraceA)){
-                $('#pagina_5').css("color", "#c7c7c7");
+                $('#pagina_5').text("")
                 $('#pagina_5').css("background-color", "#c7c7c7");
             }
             if(pagina_a6.includes(fraceA)){
-                $('#pagina_6').css("color", "#c7c7c7");
+                $('#pagina_6').text("")
                 $('#pagina_6').css("background-color", "#c7c7c7");
             }
             if(pagina_a7.includes(fraceA)){
-                $('#pagina_7').css("color", "#c7c7c7");
+                $('#pagina_7').text("")
                 $('#pagina_7').css("background-color", "#c7c7c7");
             }
             if(pagina_a8.includes(fraceA)){
-                $('#pagina_8').css("color", "#c7c7c7");
+                $('#pagina_8').text("")
                 $('#pagina_8').css("background-color", "#c7c7c7");
             }
             if(pagina_a9.includes(fraceA)){
-                $('#pagina_9').css("color", "#c7c7c7");
+                $('#pagina_9').text("")
                 $('#pagina_9').css("background-color", "#c7c7c7");
             }
         }
@@ -1985,6 +2025,27 @@ $(document).ready(function(){
 
 
     $('#boton_reiniciar').click(function(){  
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+    });
+
+    //para que los procesos en espera se pasen a ejecucion
+    $('.alerta_sin_espacio').click(function(){
+        alert("hola_le acabas de dar click al boton sin espacio")
         /*reseteo de lista de procesos activos*/
         $('.procesos_activos_a1').css("color", "#c7c7c7");
         $('.procesos_activos_a1').css("background-color", "#c7c7c7");
@@ -2044,12 +2105,6 @@ $(document).ready(function(){
 
 
         $('.alerta_sin_espacio').css("background-color", "transparent");
-
-    });
-
-    //para que los procesos en espera se pasen a ejecucion
-    $('.alerta_sin_espacio').click(function(){
-        alert("hola_le acabas de dar click al boton sin espacio")
     })
 
  });
