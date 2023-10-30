@@ -85,6 +85,10 @@ body {
     margin-left: 8px;
     width: 80px;
 }
+.reinicio_contennedor {
+    display: flex;
+    flex-wrap: wrap;
+}
 .terminar_proceso {
     display: flex;
     flex-wrap: wrap;

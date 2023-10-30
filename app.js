@@ -37,13 +37,7 @@ $(document).ready(function(){
         let num_ocupadas =Number( $(".casilla_de_paginas_ocupadas").text());//casilla de paginas ocupadas
         let eleccion = $("#selec_proceso option:selected").text(); /*esto es para jalar la seleccion del select y alojarlo en una variable*/
     
-        //// Definir un objeto que contiene las variables y sus colores
-        //if (variableEspera != "") {
-        //    variableEspera = variableSeleccionada;
-        //}
-        //if (tamanoEspera != 0) {
-        //    tamanoEspera = seleccionDeTamano;
-        //}
+        
     
     
         var colores = {
@@ -63,20 +57,124 @@ $(document).ready(function(){
         if (pa_despues_proceso != "") {
             switch (pa_despues_proceso[0]) {
                 case "A1":
-                    variableSeleccionada = $('#selec_proceso').val(['A1']);
-                    //pa_despues_proceso.shift();//borrar primer valor
+                    variableSeleccionada = "A1";
+                    if ($('.procesos_en_espera_a1').text() == "A1") {
+                        $('.procesos_en_espera_a1').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a1').text("");
+                        $('.procesos_en_espera_a1').css("background-color", "#c7c7c7");                
+                    }if ($('.procesos_en_espera_a2').text() == "A1") {
+                        $('.procesos_en_espera_a2').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a2').text("");
+                        $('.procesos_en_espera_a2').css("background-color", "#c7c7c7");
+                    }if ($('.procesos_en_espera_a3').text() == "A1") {
+                        $('.procesos_en_espera_a3').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a3').text("");
+                        $('.procesos_en_espera_a3').css("background-color", "#c7c7c7");
+                    }if ($('.procesos_en_espera_a4').text() == "A1") {
+                        $('.procesos_en_espera_a4').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a4').text("");
+                        $('.procesos_en_espera_a4').css("background-color", "#c7c7c7");
+                    }if ($('.procesos_en_espera_a5').text() == "A1") {
+                        $('.procesos_en_espera_a5').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a5').text("");
+                        $('.procesos_en_espera_a5').css("background-color", "#c7c7c7");
+                    }
                     break;
                 case "A2":
-                    variableSeleccionada = $('#selec_proceso').val(['A2']);
+                    variableSeleccionada = "A2";
+                    if ($('.procesos_en_espera_a1').text() == "A2") {
+                        $('.procesos_en_espera_a1').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a1').text("");
+                        $('.procesos_en_espera_a1').css("background-color", "#c7c7c7");                
+                    }if ($('.procesos_en_espera_a2').text() == "A2") {
+                        $('.procesos_en_espera_a2').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a2').text("");
+                        $('.procesos_en_espera_a2').css("background-color", "#c7c7c7");
+                    }if ($('.procesos_en_espera_a3').text() == "A2") {
+                        $('.procesos_en_espera_a3').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a3').text("");
+                        $('.procesos_en_espera_a3').css("background-color", "#c7c7c7");
+                    }if ($('.procesos_en_espera_a4').text() == "A2") {
+                        $('.procesos_en_espera_a4').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a4').text("");
+                        $('.procesos_en_espera_a4').css("background-color", "#c7c7c7");
+                    }if ($('.procesos_en_espera_a5').text() == "A2") {
+                        $('.procesos_en_espera_a5').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a5').text("");
+                        $('.procesos_en_espera_a5').css("background-color", "#c7c7c7");
+                    }
                     break;
                 case "A3":
-                    variableSeleccionada = $('#selec_proceso').val(['A3']);
+                    variableSeleccionada = "A3";
+                    if ($('.procesos_en_espera_a1').text() == "A3") {
+                        $('.procesos_en_espera_a1').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a1').text("");
+                        $('.procesos_en_espera_a1').css("background-color", "#c7c7c7");                
+                    }if ($('.procesos_en_espera_a2').text() == "A3") {
+                        $('.procesos_en_espera_a2').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a2').text("");
+                        $('.procesos_en_espera_a2').css("background-color", "#c7c7c7");
+                    }if ($('.procesos_en_espera_a3').text() == "A3") {
+                        $('.procesos_en_espera_a3').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a3').text("");
+                        $('.procesos_en_espera_a3').css("background-color", "#c7c7c7");
+                    }if ($('.procesos_en_espera_a4').text() == "A3") {
+                        $('.procesos_en_espera_a4').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a4').text("");
+                        $('.procesos_en_espera_a4').css("background-color", "#c7c7c7");
+                    }if ($('.procesos_en_espera_a5').text() == "A3") {
+                        $('.procesos_en_espera_a5').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a5').text("");
+                        $('.procesos_en_espera_a5').css("background-color", "#c7c7c7");
+                    }
                     break;
                 case "A4":
-                    variableSeleccionada = $('#selec_proceso').val(['A4']);
+                    variableSeleccionada = "A4";
+                    if ($('.procesos_en_espera_a1').text() == "A4") {
+                        $('.procesos_en_espera_a1').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a1').text("");
+                        $('.procesos_en_espera_a1').css("background-color", "#c7c7c7");                
+                    }if ($('.procesos_en_espera_a2').text() == "A4") {
+                        $('.procesos_en_espera_a2').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a2').text("");
+                        $('.procesos_en_espera_a2').css("background-color", "#c7c7c7");
+                    }if ($('.procesos_en_espera_a3').text() == "A4") {
+                        $('.procesos_en_espera_a3').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a3').text("");
+                        $('.procesos_en_espera_a3').css("background-color", "#c7c7c7");
+                    }if ($('.procesos_en_espera_a4').text() == "A4") {
+                        $('.procesos_en_espera_a4').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a4').text("");
+                        $('.procesos_en_espera_a4').css("background-color", "#c7c7c7");
+                    }if ($('.procesos_en_espera_a5').text() == "A4") {
+                        $('.procesos_en_espera_a5').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a5').text("");
+                        $('.procesos_en_espera_a5').css("background-color", "#c7c7c7");
+                    }
                     break;
                 case "A5":
-                    variableSeleccionada = $('#selec_proceso').val(['A5']);
+                    variableSeleccionada = "A5";
+                    if ($('.procesos_en_espera_a1').text() == "A5") {
+                        $('.procesos_en_espera_a1').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a1').text("");
+                        $('.procesos_en_espera_a1').css("background-color", "#c7c7c7");                
+                    }if ($('.procesos_en_espera_a2').text() == "A5") {
+                        $('.procesos_en_espera_a2').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a2').text("");
+                        $('.procesos_en_espera_a2').css("background-color", "#c7c7c7");
+                    }if ($('.procesos_en_espera_a3').text() == "A5") {
+                        $('.procesos_en_espera_a3').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a3').text("");
+                        $('.procesos_en_espera_a3').css("background-color", "#c7c7c7");
+                    }if ($('.procesos_en_espera_a4').text() == "A5") {
+                        $('.procesos_en_espera_a4').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a4').text("");
+                        $('.procesos_en_espera_a4').css("background-color", "#c7c7c7");
+                    }if ($('.procesos_en_espera_a5').text() == "A5") {
+                        $('.procesos_en_espera_a5').css("color", "#c7c7c7");
+                        $('.procesos_en_espera_a5').text("");
+                        $('.procesos_en_espera_a5').css("background-color", "#c7c7c7");
+                    }
                     break;
             
                 default:
@@ -84,35 +182,27 @@ $(document).ready(function(){
             }            
             switch (pa_despues_tamano[0]) {
                 case 64:
-                    seleccionDeTamano = $('#selec_tamano').val([64]);
-                    //pa_despues_tamano.shift();//borrar primer valor
+                    seleccionDeTamano = 64;
                     break;
                 case 128:
-                    seleccionDeTamano = $('#selec_tamano').val([128]);
+                    seleccionDeTamano = 128;
                     break;
                 case 256:
-                    seleccionDeTamano = $('#selec_tamano').val([256]);
+                    seleccionDeTamano = 256;
                     break;
                 case 512:
-                    seleccionDeTamano = $('#selec_tamano').val([512]);
+                    seleccionDeTamano = 512;
                     break;
                 case 1024:
-                    seleccionDeTamano = $('#selec_tamano').val([1024]);
-                    alert("siiiiii")
+                    seleccionDeTamano = 1024;
                     break;
             
                 default:
                     break;
             }            
         }
+        colorYVariable = colores[variableSeleccionada]; //junta la variable y el color para modificar el color en el background
         
-
-
-
-
-
-
-
 
         switch (seleccionDeTamano) {
             case 64:
@@ -849,19 +939,19 @@ $(document).ready(function(){
             case 512:
                 if ($("#pagina_1").text()=="") {                
                     //modificador de color en pagina
-                    $("#pagina_1").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_1").text(variableSeleccionada + " 512 bits");
                     $('#pagina_1').css("color", "white")
                     $('#pagina_1').css("background-color",colorYVariable)
                     //pagiina siguiente
-                    $("#pagina_2").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_2").text(variableSeleccionada + " 512 bits");
                     $('#pagina_2').css("color", "white")
                     $('#pagina_2').css("background-color",colorYVariable)
                     //pagiina siguiente
-                    $("#pagina_3").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_3").text(variableSeleccionada + " 512 bits");
                     $('#pagina_3').css("color", "white")
                     $('#pagina_3').css("background-color",colorYVariable)
                     //pagiina siguiente
-                    $("#pagina_4").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_4").text(variableSeleccionada + " 512 bits");
                     $('#pagina_4').css("color", "white")
                     $('#pagina_4').css("background-color",colorYVariable)
                     
@@ -905,19 +995,19 @@ $(document).ready(function(){
                     return 
                 }if ($("#pagina_2").text()=="") {                
                     //modificador de color en pagina
-                    $("#pagina_2").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_2").text(variableSeleccionada + " 512 bits");
                     $('#pagina_2').css("color", "white")
                     $('#pagina_2').css("background-color",colorYVariable)
                     //pagiina siguiente
-                    $("#pagina_3").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_3").text(variableSeleccionada + " 512 bits");
                     $('#pagina_3').css("color", "white")
                     $('#pagina_3').css("background-color",colorYVariable)
                     //pagiina siguiente
-                    $("#pagina_4").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_4").text(variableSeleccionada + " 512 bits");
                     $('#pagina_4').css("color", "white")
                     $('#pagina_4').css("background-color",colorYVariable)
                     //pagiina siguiente
-                    $("#pagina_5").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_5").text(variableSeleccionada + " 512 bits");
                     $('#pagina_5').css("color", "white")
                     $('#pagina_5').css("background-color",colorYVariable)
                     
@@ -961,19 +1051,19 @@ $(document).ready(function(){
                     return 
                 }if ($("#pagina_3").text()=="") {                
                     //modificador de color en pagina
-                    $("#pagina_3").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_3").text(variableSeleccionada + " 512 bits");
                     $('#pagina_3').css("color", "white")
                     $('#pagina_3').css("background-color",colorYVariable)
                     //pagiina siguiente
-                    $("#pagina_4").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_4").text(variableSeleccionada + " 512 bits");
                     $('#pagina_4').css("color", "white")
                     $('#pagina_4').css("background-color",colorYVariable)
                     //pagiina siguiente
-                    $("#pagina_5").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_5").text(variableSeleccionada + " 512 bits");
                     $('#pagina_5').css("color", "white")
                     $('#pagina_5').css("background-color",colorYVariable)
                     //pagiina siguiente
-                    $("#pagina_6").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_6").text(variableSeleccionada + " 512 bits");
                     $('#pagina_6').css("color", "white")
                     $('#pagina_6').css("background-color",colorYVariable)
                     
@@ -1017,19 +1107,19 @@ $(document).ready(function(){
                     return 
                 }if ($("#pagina_4").text()=="") {                
                     //modificador de color en pagina
-                    $("#pagina_4").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_4").text(variableSeleccionada + " 512 bits");
                     $('#pagina_4').css("color", "white")
                     $('#pagina_4').css("background-color",colorYVariable)
                     //pagiina siguiente
-                    $("#pagina_5").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_5").text(variableSeleccionada + " 512 bits");
                     $('#pagina_5').css("color", "white")
                     $('#pagina_5').css("background-color",colorYVariable)
                     //pagiina siguiente
-                    $("#pagina_6").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_6").text(variableSeleccionada + " 512 bits");
                     $('#pagina_6').css("color", "white")
                     $('#pagina_6').css("background-color",colorYVariable)
                     //pagiina siguiente
-                    $("#pagina_7").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_7").text(variableSeleccionada + " 512 bits");
                     $('#pagina_7').css("color", "white")
                     $('#pagina_7').css("background-color",colorYVariable)
                     
@@ -1074,19 +1164,19 @@ $(document).ready(function(){
                     return 
                 }if ($("#pagina_5").text()=="") {                
                     //modificador de color en pagina
-                    $("#pagina_5").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_5").text(variableSeleccionada + " 512 bits");
                     $('#pagina_5').css("color", "white")
                     $('#pagina_5').css("background-color",colorYVariable)
                     //pagiina siguiente
-                    $("#pagina_6").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_6").text(variableSeleccionada + " 512 bits");
                     $('#pagina_6').css("color", "white")
                     $('#pagina_6').css("background-color",colorYVariable)
                     //pagiina siguiente
-                    $("#pagina_7").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_7").text(variableSeleccionada + " 512 bits");
                     $('#pagina_7').css("color", "white")
                     $('#pagina_7').css("background-color",colorYVariable)
                     //pagiina siguiente
-                    $("#pagina_8").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_8").text(variableSeleccionada + " 512 bits");
                     $('#pagina_8').css("color", "white")
                     $('#pagina_8').css("background-color",colorYVariable)               
     
@@ -1130,19 +1220,19 @@ $(document).ready(function(){
                     return 
                 }if ($("#pagina_6").text()=="") {                
                     //modificador de color en pagina
-                    $("#pagina_6").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_6").text(variableSeleccionada + " 512 bits");
                     $('#pagina_6').css("color", "white")
                     $('#pagina_6').css("background-color",colorYVariable)
                     //pagiina siguiente
-                    $("#pagina_7").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_7").text(variableSeleccionada + " 512 bits");
                     $('#pagina_7').css("color", "white")
                     $('#pagina_7').css("background-color",colorYVariable)
                     //pagiina siguiente
-                    $("#pagina_8").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_8").text(variableSeleccionada + " 512 bits");
                     $('#pagina_8').css("color", "white")
                     $('#pagina_8').css("background-color",colorYVariable)
                     //pagiina siguiente
-                    $("#pagina_9").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_9").text(variableSeleccionada + " 512 bits");
                     $('#pagina_9').css("color", "white")
                     $('#pagina_9').css("background-color",colorYVariable)               
     
@@ -1234,7 +1324,7 @@ $(document).ready(function(){
                     $('#pagina_1').css("color", "white")
                     $('#pagina_1').css("background-color",colorYVariable)
                     //pagiina siguiente
-                    $("#pagina_2").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_2").text(variableSeleccionada + " 1024 bits");
                     $('#pagina_2').css("color", "white")
                     $('#pagina_2').css("background-color",colorYVariable)
                     //pagiina siguiente
@@ -1306,7 +1396,7 @@ $(document).ready(function(){
                     $('#pagina_2').css("color", "white")
                     $('#pagina_2').css("background-color",colorYVariable)
                     //pagiina siguiente
-                    $("#pagina_3").text(variableSeleccionada + " 256 bits");
+                    $("#pagina_3").text(variableSeleccionada + " 1024 bits");
                     $('#pagina_3').css("color", "white")
                     $('#pagina_3').css("background-color",colorYVariable)
                     //pagiina siguiente
@@ -1809,8 +1899,11 @@ $(document).ready(function(){
     $('#boton_terminar_proceso').click(function(){ 
         let eleccion_terminar =$("#selec_proceso_para_terminar option:selected").text(); /*esto es para jalar la seleccion del select y alojarlo en una variable*/
         let num_ocupadas =Number( $(".casilla_de_paginas_ocupadas").text());//casilla de paginas ocupadas
+        let contador = Number( $(".casilla_de_numeros_procesos").text());
 
-        if (eleccion_terminar == "A1") {            
+        if (eleccion_terminar == "A1") {
+            $(".casilla_de_numeros_procesos").text(contador - 1);
+
             //para la lista de procesos activos
             if ($('.procesos_activos_a1').text() == "A1") {
                 $('.procesos_activos_a1').css("color", "#c7c7c7");
@@ -1846,47 +1939,47 @@ $(document).ready(function(){
             let fraceA = "A1";           
 
             if (pagina_a1.includes(fraceA)) {
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_1').text("");
                 $('#pagina_1').css("background-color", "#c7c7c7");
             }
             if(pagina_a2.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_2').text("");
                 $('#pagina_2').css("background-color", "#c7c7c7");
             }
             if(pagina_a3.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_3').text("");
                 $('#pagina_3').css("background-color", "#c7c7c7");
             }
             if(pagina_a4.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_4').text("");
                 $('#pagina_4').css("background-color", "#c7c7c7");
             }
             if(pagina_a5.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_5').text("");
                 $('#pagina_5').css("background-color", "#c7c7c7");
             }
             if(pagina_a6.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_6').text("");
                 $('#pagina_6').css("background-color", "#c7c7c7");
             }
             if(pagina_a7.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_7').text("");
                 $('#pagina_7').css("background-color", "#c7c7c7");
             }
             if(pagina_a8.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_8').text("");
                 $('#pagina_8').css("background-color", "#c7c7c7");
             }
             if(pagina_a9.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_9').text("");
                 $('#pagina_9').css("background-color", "#c7c7c7");
             }
@@ -1895,6 +1988,10 @@ $(document).ready(function(){
             }
 
         }if (eleccion_terminar == "A2") {
+            $(".casilla_de_numeros_procesos").text( contador - 1);
+            if ($(".casilla_de_numeros_procesos").text() < 0 ) {
+                $(".casilla_de_numeros_procesos").text(0);
+            }
             if ($('.procesos_activos_a1').text() == "A2") { //para la lista de procesos activos
                 $('.procesos_activos_a1').css("color", "#c7c7c7");
                 $('.procesos_activos_a1').text("");
@@ -1929,55 +2026,56 @@ $(document).ready(function(){
             let fraceA = "A2";
 
             if (pagina_a1.includes(fraceA)) {
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_1').text("");
                 $('#pagina_1').css("background-color", "#c7c7c7");
             }
             if(pagina_a2.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_2').text("");
                 $('#pagina_2').css("background-color", "#c7c7c7");
             }
             if(pagina_a3.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_3').text("");
                 $('#pagina_3').css("background-color", "#c7c7c7");
             }
             if(pagina_a4.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_4').text("");
                 $('#pagina_4').css("background-color", "#c7c7c7");
             }
             if(pagina_a5.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_5').text("");
                 $('#pagina_5').css("background-color", "#c7c7c7");
             }
             if(pagina_a6.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_6').text("");
                 $('#pagina_6').css("background-color", "#c7c7c7");
             }
             if(pagina_a7.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_7').text("");
                 $('#pagina_7').css("background-color", "#c7c7c7");
             }
             if(pagina_a8.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_8').text("");
                 $('#pagina_8').css("background-color", "#c7c7c7");
             }
             if(pagina_a9.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_9').text("");
                 $('#pagina_9').css("background-color", "#c7c7c7");
             }
-            if ($(".casilla_de_paginas_ocupadas").text() < 0) { // para corregir que tenga balores de -1
-                $(".casilla_de_paginas_ocupadas").text(0);                
-            }
 
         }if (eleccion_terminar == "A3") {
+            $(".casilla_de_numeros_procesos").text( contador - 1);
+            if ($(".casilla_de_numeros_procesos").text() < 0 ) {
+                $(".casilla_de_numeros_procesos").text(0);
+            }
             if ($('.procesos_activos_a1').text() == "A3") { //para la lista de procesos activos
                 $('.procesos_activos_a1').css("color", "#c7c7c7");
                 $('.procesos_activos_a1').text("");
@@ -2012,47 +2110,47 @@ $(document).ready(function(){
             let fraceA = "A3";
 
             if (pagina_a1.includes(fraceA)) {
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_1').text("");
                 $('#pagina_1').css("background-color", "#c7c7c7");
             }
             if(pagina_a2.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_2').text("");
                 $('#pagina_2').css("background-color", "#c7c7c7");
             }
             if(pagina_a3.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_3').text("");
                 $('#pagina_3').css("background-color", "#c7c7c7");
             }
             if(pagina_a4.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_4').text("");
                 $('#pagina_4').css("background-color", "#c7c7c7");
             }
             if(pagina_a5.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_5').text("");
                 $('#pagina_5').css("background-color", "#c7c7c7");
             }
             if(pagina_a6.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_6').text("");
                 $('#pagina_6').css("background-color", "#c7c7c7");
             }
             if(pagina_a7.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_7').text("");
                 $('#pagina_7').css("background-color", "#c7c7c7");
             }
             if(pagina_a8.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_8').text("");
                 $('#pagina_8').css("background-color", "#c7c7c7");
             }
             if(pagina_a9.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_9').text("");
                 $('#pagina_9').css("background-color", "#c7c7c7");
             }
@@ -2060,6 +2158,10 @@ $(document).ready(function(){
                 $(".casilla_de_paginas_ocupadas").text(0);                
             }
         }if (eleccion_terminar == "A4") {
+            $(".casilla_de_numeros_procesos").text( contador - 1);
+            if ($(".casilla_de_numeros_procesos").text() < 0 ) {
+                $(".casilla_de_numeros_procesos").text(0);
+            }
             if ($('.procesos_activos_a1').text() == "A4") { //para la lista de procesos activos
                 $('.procesos_activos_a1').css("color", "#c7c7c7");
                 $('.procesos_activos_a1').text("");
@@ -2094,47 +2196,47 @@ $(document).ready(function(){
             let fraceA = "A4";
 
             if (pagina_a1.includes(fraceA)) {
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_1').text("");
                 $('#pagina_1').css("background-color", "#c7c7c7");
             }
             if(pagina_a2.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_2').text("");
                 $('#pagina_2').css("background-color", "#c7c7c7");
             }
             if(pagina_a3.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_3').text("");
                 $('#pagina_3').css("background-color", "#c7c7c7");
             }
             if(pagina_a4.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_4').text("");
                 $('#pagina_4').css("background-color", "#c7c7c7");
             }
             if(pagina_a5.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_5').text("");
                 $('#pagina_5').css("background-color", "#c7c7c7");
             }
             if(pagina_a6.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_6').text("");
                 $('#pagina_6').css("background-color", "#c7c7c7");
             }
             if(pagina_a7.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_7').text("");
                 $('#pagina_7').css("background-color", "#c7c7c7");
             }
             if(pagina_a8.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_8').text("");
                 $('#pagina_8').css("background-color", "#c7c7c7");
             }
             if(pagina_a9.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_9').text("");
                 $('#pagina_9').css("background-color", "#c7c7c7");
             }
@@ -2142,6 +2244,10 @@ $(document).ready(function(){
                 $(".casilla_de_paginas_ocupadas").text(0);                
             }
         }if (eleccion_terminar == "A5") {
+            $(".casilla_de_numeros_procesos").text( contador - 1);
+            if ($(".casilla_de_numeros_procesos").text() < 0 ) {
+                $(".casilla_de_numeros_procesos").text(0);
+            }
             if ($('.procesos_activos_a1').text() == "A5") { //para la lista de procesos activos
                 $('.procesos_activos_a1').css("color", "#c7c7c7");
                 $('.procesos_activos_a1').text("");
@@ -2177,47 +2283,47 @@ $(document).ready(function(){
             let fraceA = "A5";
 
             if (pagina_a1.includes(fraceA)) {
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_1').text("");
                 $('#pagina_1').css("background-color", "#c7c7c7");
             }
             if(pagina_a2.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_2').text("");
                 $('#pagina_2').css("background-color", "#c7c7c7");
             }
             if(pagina_a3.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_3').text("");
                 $('#pagina_3').css("background-color", "#c7c7c7");
             }
             if(pagina_a4.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_4').text("");
                 $('#pagina_4').css("background-color", "#c7c7c7");
             }
             if(pagina_a5.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_5').text("");
                 $('#pagina_5').css("background-color", "#c7c7c7");
             }
             if(pagina_a6.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_6').text("");
                 $('#pagina_6').css("background-color", "#c7c7c7");
             }
             if(pagina_a7.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_7').text("");
                 $('#pagina_7').css("background-color", "#c7c7c7");
             }
             if(pagina_a8.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_8').text("");
                 $('#pagina_8').css("background-color", "#c7c7c7");
             }
             if(pagina_a9.includes(fraceA)){
-                $(".casilla_de_paginas_ocupadas").text( - 1);
+                $(".casilla_de_paginas_ocupadas").text( contador - 1);
                 $('#pagina_9').text("");
                 $('#pagina_9').css("background-color", "#c7c7c7");
             }
@@ -2263,9 +2369,9 @@ $(document).ready(function(){
 
         $('#boton_iniciar').trigger('click', [primerValor, primerTamano]);
         
-
-
         
+        pa_despues_proceso.shift();//borrar primer valor
+        pa_despues_tamano.shift();//borrar primer valor
 
     });
 
